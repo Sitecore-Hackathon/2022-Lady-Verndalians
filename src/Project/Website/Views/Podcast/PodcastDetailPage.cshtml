@@ -1,0 +1,19 @@
+﻿@model Mvp.Feature.Media.Podcast.Models.PodcastModel
+    
+@if (Model == null)
+{
+    return;
+}
+ 
+<article>
+    <h1>
+        @Html.Raw(Model.PodcastName)
+    </h1>
+    
+    <audio></audio>
+    
+    <div class="transcript">
+        <p>@Html.Raw(Model.PodcastTranscript)</p>
+    </div>
+
+</article>

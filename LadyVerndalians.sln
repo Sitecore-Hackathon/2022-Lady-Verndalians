@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{D0421198-ACB5-496A-A674-D959B253C66F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{61711A7B-CD76-4FF2-962F-C6DD2BEFE39A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{CE0FB731-C291-4163-A730-B87543A6D7F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Feature.Media.Podcast", "src\Feature\Feature.Media\Mvp.Feature.Media.Podcast.csproj", "{00765CBC-F1A7-4C4A-BF95-1E1000C1BE20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "src\Project\Website\Website.csproj", "{2A97DE80-946C-4AA7-9230-2070DBC02BD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{E9CB2139-A467-46B5-9477-9B4B652DDA18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Podcast", "Podcast", "{8B799DC6-28C8-4DE9-BD23-56034D579D25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TextToSpeech", "TextToSpeech", "{67C0D69B-99D5-4A39-A8E5-2DD589B36383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Feature.Media.TextToSpeech", "src\Feature\Feature.Media.TextToSpeech\Mvp.Feature.Media.TextToSpeech\Mvp.Feature.Media.TextToSpeech.csproj", "{A77EFFB8-338B-4AA7-B0C7-ECAC35EB356E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{B48F17C9-F743-4FEE-9005-AF0137A3F71A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvp.Feature.Search", "src\Feature\Feature.Search\Mvp.Feature.Search\Mvp.Feature.Search.csproj", "{5DE2CF5D-D718-4275-BF99-739CCC4F1D8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00765CBC-F1A7-4C4A-BF95-1E1000C1BE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00765CBC-F1A7-4C4A-BF95-1E1000C1BE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00765CBC-F1A7-4C4A-BF95-1E1000C1BE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00765CBC-F1A7-4C4A-BF95-1E1000C1BE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A97DE80-946C-4AA7-9230-2070DBC02BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A97DE80-946C-4AA7-9230-2070DBC02BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A97DE80-946C-4AA7-9230-2070DBC02BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A97DE80-946C-4AA7-9230-2070DBC02BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77EFFB8-338B-4AA7-B0C7-ECAC35EB356E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77EFFB8-338B-4AA7-B0C7-ECAC35EB356E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77EFFB8-338B-4AA7-B0C7-ECAC35EB356E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77EFFB8-338B-4AA7-B0C7-ECAC35EB356E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE2CF5D-D718-4275-BF99-739CCC4F1D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE2CF5D-D718-4275-BF99-739CCC4F1D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE2CF5D-D718-4275-BF99-739CCC4F1D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE2CF5D-D718-4275-BF99-739CCC4F1D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00765CBC-F1A7-4C4A-BF95-1E1000C1BE20} = {8B799DC6-28C8-4DE9-BD23-56034D579D25}
+		{2A97DE80-946C-4AA7-9230-2070DBC02BD8} = {D0421198-ACB5-496A-A674-D959B253C66F}
+		{E9CB2139-A467-46B5-9477-9B4B652DDA18} = {61711A7B-CD76-4FF2-962F-C6DD2BEFE39A}
+		{8B799DC6-28C8-4DE9-BD23-56034D579D25} = {E9CB2139-A467-46B5-9477-9B4B652DDA18}
+		{67C0D69B-99D5-4A39-A8E5-2DD589B36383} = {E9CB2139-A467-46B5-9477-9B4B652DDA18}
+		{A77EFFB8-338B-4AA7-B0C7-ECAC35EB356E} = {67C0D69B-99D5-4A39-A8E5-2DD589B36383}
+		{B48F17C9-F743-4FEE-9005-AF0137A3F71A} = {61711A7B-CD76-4FF2-962F-C6DD2BEFE39A}
+		{5DE2CF5D-D718-4275-BF99-739CCC4F1D8D} = {B48F17C9-F743-4FEE-9005-AF0137A3F71A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0472491-925C-410D-A778-B3AB590F3915}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Mvp.Feature.Search.Models.PodcastSearchResultItem>
+
+@if (Model == null)
+{
+    return;
+
+}
+
+<section>
+    <form method="post">
+        <label for="phrase">Search:</label>
+        <input type="text" name="phrase" id="phrase" />
+
+        <button type="submit">Submit</button>
+
+        <div>Results:</div>
+
+        @foreach (var item in Model)
+        {
+            <h3>@item.PodcastName</h3>
+            <p style="margin-bottom: 20px;">@item.PodcastTranscription</p>
+        }
+
+
+
+
+    </form>
+</section>
