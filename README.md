@@ -6,6 +6,10 @@
 - [Entry form template](ENTRYFORM.md)
 - [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
 
+We had it working in pieces but it just didn't come together in time, unfortunately.
+We don't have a working solution but we wanted to check it in to share with each other.
+Thanks for volunteering to judge.
+
 
 # Hackathon Submission Entry form
 
