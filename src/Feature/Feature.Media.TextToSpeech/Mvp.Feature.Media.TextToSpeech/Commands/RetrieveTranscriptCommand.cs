@@ -1,4 +1,5 @@
-﻿using Sitecore.Data.Items;
+﻿using Mvp.Feature.Media.TextToSpeech.Service;
+using Sitecore;
 using Sitecore.Diagnostics;
 using Sitecore.Shell.Framework.Commands;
 using System.Linq;
@@ -16,13 +17,27 @@ namespace Mvp.Feature.Media.TextToSpeech.Commands
             if (contextItem == null)
                 return;
 
-            //call to get transcription
-
-            using (new EditContext(contextItem))
+            if (string.IsNullOrEmpty(contextItem.Fields["Audio File Path"]?.Value))
             {
-                contextItem.Fields["Transcription"].Value =
-                    "You've made a test transcription on: " + System.DateTime.Now.ToString("F");
+                Context.ClientPage.ClientResponse.Alert($"Please populate the Audio File Path before attempting to transcribe.");
+                return;
             }
+
+            if (!contextItem.Fields["Audio File Path"].Value.EndsWith(".mp3"))
+            {
+                Context.ClientPage.ClientResponse.Alert($"At this time, the transcription process only supports mp3 files. Please populate the Audio File Path with an mp3.");
+                return;
+            }
+            
+            Context.ClientPage.ClientResponse.Alert($"Press OK to continue to the parent page.  Check back later to review transcription.");
+            
+            string load = "item:load(id={5AAAACF1-A454-44A5-9940-E9353D1A3521},language=en,version=1)";
+            Context.ClientPage.ClientResponse.Timer(load, 0);
+
+            //call to get transcription
+            var transcriptService = new TextToSpeechService();
+            
+            transcriptService.StartBackgroundJob(contextItem);
         }
     }
 }

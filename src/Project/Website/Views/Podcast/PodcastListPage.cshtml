@@ -28,11 +28,22 @@
                 @foreach (var item in Model)
                 {
                     <div class="row">
-                        <div class="col-sm-12">
-                            <h3>@item.PodcastName</h3>
-                            <p>Lorem @item.PodcastTranscription</p>
+                        <div class="col-sm-4" style="padding-top:20px">
+                            <audio id="music" controls="controls" src="@item.AudioFile" preload="true">
+                                <source src="@item.AudioFile">
+                            </audio>
+                            <div id="audioplayer">
+                                <i id="pButton" class="fas fa-play"></i>
+                                <div id="timeline">
+                                    <div id="playhead"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                            <div class="col-sm-8">
+                                <h3>@item.PodcastName</h3>
+                                <p>@item.PodcastTranscription.Substring(0,Math.Min(item.PodcastTranscription.Length,90))</p>
+                            </div>
+                        </div>
                 }
             </div>
         }

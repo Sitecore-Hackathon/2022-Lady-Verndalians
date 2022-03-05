@@ -1,72 +1,54 @@
-# Hackathon Submission Entry form
 
-> __Important__  
-> 
-> Copy and paste the content of this file into README.md or face automatic __disqualification__  
-> All headlines and subheadlines shall be retained if not noted otherwise.  
-> Fill in text in each section as instructed and then delete the existing text, including this blockquote.
+![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
+# Sitecore Hackathon 2022
+
+- MUST READ: **[Submission requirements](SUBMISSION_REQUIREMENTS.md)**
+- [Entry form template](ENTRYFORM.md)
+- [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
+  
+
+### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
+
+# Hackathon Submission Entry form
 
 You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
 
 ## Team name
-⟹ Write the name of your Hackathon team here
+Lady Verndalians
 
 ## Category
-⟹ Write the name of the selected category
+Best addition to the Sitecore MVP site
 
 ## Description
-⟹ Write a clear description of your hackathon entry.  
 
-  - Module Purpose
-  - What problem was solved (if any)
-    - How does this module solve it
-
-_You can alternately paste a [link here](#docs) to a document within this repo containing the description._
+Unless you have been living under a rock recently, you know that Content is trending! Providing high quality content and a smart way to access that content is important for all businesses. It helps attract clients and create interest.  Also, having a site that is accessible is mandatory.
+Our module provides a search page for the MVP Get to Know an MVP podcasts that exposes the content in the audio file.  It transcribes podcasts in the Content Editor and retains the transcription.  While utilizing Microsoft Cognitive Services Speech To Text API, the task is run as a background job to not disrupt the content author.
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
-
+[Lady Verndalians Video](https://github.com/Sitecore-Hackathon/2022-Lady-Verndalians/blob/develop/Lady%20Verndalians%20Hackathon%202022%20Video.mp4)
 
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
-
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
-
-_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
+ - Install-Package Microsoft.CognitiveServices.Speech -Version 1.20.0 if it doesn't self-install
 
 ## Installation instructions
 ⟹ Write a short clear step-wise instruction on how to install your module.  
 
-> _A simple well-described installation process is required to win the Hackathon._  
-> Feel free to use any of the following tools/formats as part of the installation:
-> - Sitecore Package files
-> - Docker image builds
-> - Sitecore CLI
-> - msbuild
-> - npm / yarn
-> 
-> _Do not use_
-> - TDS
-> - Unicorn
- 
-f. ex. 
+- Sign up for Microsoft Cognitive Services: [Start Free](https://azure.microsoft.com/en-us/free/cognitive-services/)
+- Open the solution.
+- Add the license key and your assigned region to the Foundation.CognitiveServices app.Config file
+ - Install-Package Microsoft.CognitiveServices.Speech -Version 1.20.0 if it doesn't self-install
+ - Build
+ - Use the Sitecore Installation wizard to install the [package](#link-to-package)
 
-1. Start docker environment using `.\Start-Hackathon.ps1`
-2. Open solution in Visual Studio and run build
-3. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-4. ...
-5. profit
 
 ### Configuration
-⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
 
-_Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
+ - Sign up for Microsoft Cognitive Services: [Start Free]
+ - Add the license key and your assigned region to the Foundation.CognitiveServices app.Config file
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
@@ -85,3 +67,4 @@ And you can embed external images too:
 
 ## Comments
 If you'd like to make additional comments that is important for your module entry.
+

@@ -27,43 +27,28 @@ Our module provides a search page for the MVP Get to Know an MVP podcasts that e
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
-
+[Lady Verndalians Video](https://github.com/Sitecore-Hackathon/2022-Lady-Verndalians/blob/develop/Lady%20Verndalians%20Hackathon%202022%20Video.mp4)
 
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
-
- - Install-Package Microsoft.CognitiveServices.Speech -Version 1.20.0
+ - Install-Package Microsoft.CognitiveServices.Speech -Version 1.20.0 if it doesn't self-install
 
 ## Installation instructions
 ⟹ Write a short clear step-wise instruction on how to install your module.  
 
-> _A simple well-described installation process is required to win the Hackathon._  
-> Feel free to use any of the following tools/formats as part of the installation:
-> - Sitecore Package files
-> - Docker image builds
-> - Sitecore CLI
-> - msbuild
-> - npm / yarn
-> 
-> _Do not use_
-> - TDS
-> - Unicorn
- 
-f. ex. 
+- Sign up for Microsoft Cognitive Services: [Start Free](https://azure.microsoft.com/en-us/free/cognitive-services/)
+- Open the solution.
+- Add the license key and your assigned region to the Foundation.CognitiveServices app.Config file
+ - Install-Package Microsoft.CognitiveServices.Speech -Version 1.20.0 if it doesn't self-install
+ - Build
+ - Use the Sitecore Installation wizard to install the [package](#link-to-package)
 
-1. Start docker environment using `.\Start-Hackathon.ps1`
-2. Open solution in Visual Studio and run build
-3. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-4. ...
-5. profit
 
 ### Configuration
-⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
 
-_Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
+ - Sign up for Microsoft Cognitive Services: [Start Free]
+ - Add the license key and your assigned region to the Foundation.CognitiveServices app.Config file
 
 ## Usage instructions
 ⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.

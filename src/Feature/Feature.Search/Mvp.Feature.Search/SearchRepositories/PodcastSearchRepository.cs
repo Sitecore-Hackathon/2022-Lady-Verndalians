@@ -9,7 +9,7 @@ namespace Mvp.Feature.Search.SearchRepositories
     {
         public List<PodcastSearchResultItem> GetPodcasts(string query)
         {
-            var podcastList = new List<PodcastSearchResultItem>();
+            List<PodcastSearchResultItem> podcastList;
 
             ISearchIndex index = ContentSearchManager.GetIndex("sitecore_web_index");
 
@@ -18,7 +18,7 @@ namespace Mvp.Feature.Search.SearchRepositories
                 var list = context.GetQueryable<PodcastSearchResultItem>()
                     .Where(x => x.TemplateName == "Podcast Detail" 
                                 && !x.Name.Contains("__") 
-                                && x.PodcastTranscription.Contains(query));
+                                && (x.PodcastTranscription.Contains(query) || x.PodcastName.Contains(query)));
 
                 podcastList = list.ToList();
             }
