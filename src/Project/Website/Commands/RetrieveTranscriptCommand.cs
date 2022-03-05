@@ -1,10 +1,11 @@
-﻿using Mvp.Feature.Media.TextToSpeech.Service;
+﻿using System.Configuration;
+using System.Linq;
+using Mvp.Feature.Media.TextToSpeech.Service;
 using Sitecore;
 using Sitecore.Diagnostics;
 using Sitecore.Shell.Framework.Commands;
-using System.Linq;
 
-namespace Mvp.Feature.Media.TextToSpeech.Commands
+namespace Website.Commands
 {
     public class RetrieveTranscriptCommand : Command
     {
@@ -34,8 +35,11 @@ namespace Mvp.Feature.Media.TextToSpeech.Commands
             string load = "item:load(id={5AAAACF1-A454-44A5-9940-E9353D1A3521},language=en,version=1)";
             Context.ClientPage.ClientResponse.Timer(load, 0);
 
+            var license = ConfigurationManager.AppSettings["CognitiveServicesLicenseKey"];
+            var key = ConfigurationManager.AppSettings["CognitiveServicesRegion"];
+
             //call to get transcription
-            var transcriptService = new TextToSpeechService();
+            var transcriptService = new TextToSpeechService(license, key);
             
             transcriptService.StartBackgroundJob(contextItem);
         }

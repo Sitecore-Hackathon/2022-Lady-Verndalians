@@ -39,7 +39,9 @@ Our module provides a search page for the MVP Get to Know an MVP podcasts that e
 
 - Sign up for Microsoft Cognitive Services: [Start Free](https://azure.microsoft.com/en-us/free/cognitive-services/)
 - Open the solution.
-- Add the license key and your assigned region to the Foundation.CognitiveServices app.Config file
+- Add the license key and your assigned region to the web.Config file
+	    <add key="CognitiveServicesLicenseKey" value="xxxxxxxxxx"/>
+        <add key="CognitiveServicesRegion" value="westus"/>
  - Install-Package Microsoft.CognitiveServices.Speech -Version 1.20.0 if it doesn't self-install
  - Build
  - Use the Sitecore Installation wizard to install the [package](#link-to-package)

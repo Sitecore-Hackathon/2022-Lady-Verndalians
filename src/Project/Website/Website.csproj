@@ -1344,6 +1344,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\RetrieveTranscriptCommand.cs" />
     <Compile Include="Controllers\Podcast\PodcastListController.cs" />
     <Compile Include="Controllers\Podcast\PodcastController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1362,7 +1363,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="App_Config\Include\Commands\Mvp.Feature.Media.SpeechToText.Commands.config" />
+    <Content Include="App_Config\Include\Commands\SpeechToText.Commands.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1394,6 +1395,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>

@@ -9,10 +9,9 @@ namespace Foundation.CognitiveServices
     public static class SpeechRecognition
     {
 
-        public static async Task<string> GetTranslatedText(string mp3Path)
+        public static async Task<string> GetTranslatedText(string mp3Path, string license, string region)
         {
-            //todo: put in appsettings
-            var speechConfig = SpeechConfig.FromSubscription("22c9d4042aaa4a68b05c5694c1e98623", "westus");
+            var speechConfig = SpeechConfig.FromSubscription(license, region);
 
             var wavPath = "c:\\tmp\\d9246746-3646-4bd6-84a7-5b7bd98e16e1.wav";
             var translation = await FromStream(speechConfig, wavPath);
