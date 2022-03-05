@@ -5,9 +5,7 @@
 - MUST READ: **[Submission requirements](SUBMISSION_REQUIREMENTS.md)**
 - [Entry form template](ENTRYFORM.md)
 - [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
-  
 
-### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
 
 # Hackathon Submission Entry form
 
@@ -51,7 +49,10 @@ Our module provides a search page for the MVP Get to Know an MVP podcasts that e
  - Add the license key and your assigned region to the Foundation.CognitiveServices app.Config file
 
 ## Usage instructions
-⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
+
+ - Create Podcast Detail pages from this template: [  
+/sitecore/templates/Project/Pages/Podcast Detail](https://hackathon2022sc.dev.local/sitecore/shell/Applications/Content-Editor?ic=Apps%2F48x48%2FPencil.png&he=Content%20Editor&cl=0#)
+ - Enter the Podcast Name and https:// file path for the .mp4 file (from Core Sampler, for example).
 
 Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
 
