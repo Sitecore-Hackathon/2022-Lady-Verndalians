@@ -1,0 +1,27 @@
+﻿@using Sitecore.Mvc
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hackathon 2022</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="header">
+    </header>
+    <section id="content">
+        <div id="page" class="page" padding-top: 20px;>
+            @Html.Sitecore().Placeholder("Rows")
+        </div>
+    </section>
+    <footer id="footer">
+    </footer>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/Site.js"></script>
+</body>
+</html>

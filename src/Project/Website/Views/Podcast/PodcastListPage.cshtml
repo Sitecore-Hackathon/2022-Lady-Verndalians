@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Mvp.Feature.Search.Models.PodcastSearchResultItem>
+
+    @if (Model == null)
+    {
+        return;
+    }
+
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>MVP Podcasts</h1>
+            <p>Use the Search to find your favority MVP or who is talking about what!</p>
+        </div>
+        <form method="post">
+            <div class="form-group">
+                <label for="phrase">Phrase:</label>
+                <input type="text" class="form-control" name="phrase" id="phrase">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+
+        @if (Model.Any())
+        {
+            <div class="text-center">
+                <h2>Podcast Search Results</h2>
+            </div>
+            <div class="container">
+                @foreach (var item in Model)
+                {
+                    <div class="row">
+                        <div class="col-sm-4" style="padding-top:20px">
+                            <audio id="music" controls="controls" src="@item.AudioFile" preload="true">
+                                <source src="@item.AudioFile">
+                            </audio>
+                            <div id="audioplayer">
+                                <i id="pButton" class="fas fa-play"></i>
+                                <div id="timeline">
+                                    <div id="playhead"></div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-sm-8">
+                                <h3>@item.PodcastName</h3>
+                                <p>@item.PodcastTranscription.Substring(0,Math.Min(item.PodcastTranscription.Length,90))</p>
+                            </div>
+                        </div>
+                }
+            </div>
+        }
+    </div>
