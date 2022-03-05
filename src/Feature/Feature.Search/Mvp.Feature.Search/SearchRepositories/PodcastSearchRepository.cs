@@ -7,17 +7,23 @@ namespace Mvp.Feature.Search.SearchRepositories
 {
     public class PodcastSearchRepository
     {
-        public IEnumerable<PodcastSearchResultItem> GetPodcasts(string query)
+        public List<PodcastSearchResultItem> GetPodcasts(string query)
         {
+            var podcastList = new List<PodcastSearchResultItem>();
+
             ISearchIndex index = ContentSearchManager.GetIndex("sitecore_web_index");
 
             using (IProviderSearchContext context = index.CreateSearchContext())
             {
-                return context.GetQueryable<PodcastSearchResultItem>()
+                var list = context.GetQueryable<PodcastSearchResultItem>()
                     .Where(x => x.TemplateName == "Podcast Detail" 
                                 && !x.Name.Contains("__") 
                                 && x.PodcastTranscription.Contains(query));
+
+                podcastList = list.ToList();
             }
+
+            return podcastList;
         }
     }
 }

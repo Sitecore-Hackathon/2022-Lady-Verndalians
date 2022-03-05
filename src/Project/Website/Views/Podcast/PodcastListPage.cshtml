@@ -1,28 +1,39 @@
 ﻿@model IEnumerable<Mvp.Feature.Search.Models.PodcastSearchResultItem>
 
-@if (Model == null)
-{
-    return;
+    @if (Model == null)
+    {
+        return;
+    }
 
-}
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>MVP Podcasts</h1>
+            <p>Use the Search to find your favority MVP or who is talking about what!</p>
+        </div>
+        <form method="post">
+            <div class="form-group">
+                <label for="phrase">Phrase:</label>
+                <input type="text" class="form-control" name="phrase" id="phrase">
+            </div>
 
-<section>
-    <form method="post">
-        <label for="phrase">Search:</label>
-        <input type="text" name="phrase" id="phrase" />
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
 
-        <button type="submit">Submit</button>
-
-        <div>Results:</div>
-
-        @foreach (var item in Model)
+        @if (Model.Any())
         {
-            <h3>@item.PodcastName</h3>
-            <p style="margin-bottom: 20px;">@item.PodcastTranscription</p>
+            <div class="text-center">
+                <h2>Podcast Search Results</h2>
+            </div>
+            <div class="container">
+                @foreach (var item in Model)
+                {
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3>@item.PodcastName</h3>
+                            <p>Lorem @item.PodcastTranscription</p>
+                        </div>
+                    </div>
+                }
+            </div>
         }
-
-
-
-
-    </form>
-</section>
+    </div>

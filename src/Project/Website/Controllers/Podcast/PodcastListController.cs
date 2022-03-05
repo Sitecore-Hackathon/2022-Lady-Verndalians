@@ -11,8 +11,6 @@ namespace Website.Controllers.Podcast
     {
         public ActionResult Podcasts()
         {
-            var podcastModel = new PodcastListModel();
-
             return View("~/Views/Podcast/PodcastListPage.cshtml", new List<PodcastSearchResultItem>());
         }
 
@@ -20,8 +18,6 @@ namespace Website.Controllers.Podcast
         public ActionResult Podcasts(string postphrase)
         {
             var query = Request.Form["phrase"];
-
-            var podcastModel = new PodcastListModel();
 
             var searchRepo = new PodcastSearchRepository();
             
