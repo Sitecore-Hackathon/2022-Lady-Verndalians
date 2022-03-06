@@ -2,12 +2,11 @@
 ![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 # Sitecore Hackathon 2022
 
-- MUST READ: **[Submission requirements](SUBMISSION_REQUIREMENTS.md)**
-- [Entry form template](ENTRYFORM.md)
-- [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
+
   
 
-### ⟹ [Insert your documentation here](ENTRYFORM.md) <<
+JUDGES - Unfortunately, we don't have a working solution.  You can see our video for the idea where we had several working parts but we weren't able to 
+combine them.  Thanks for volunteering for this; it was fun!!  - Sandy and Jaggy
 
 # Hackathon Submission Entry form
 
