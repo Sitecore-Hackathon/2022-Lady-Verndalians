@@ -1,8 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
+using NAudio.Utils;
+using NAudio.Wave;
 
 namespace Foundation.CognitiveServices
 {
@@ -14,16 +17,35 @@ namespace Foundation.CognitiveServices
             var speechConfig = SpeechConfig.FromSubscription(license, region);
 
             var wavPath = "c:\\tmp\\d9246746-3646-4bd6-84a7-5b7bd98e16e1.wav";
-            var translation = await FromStream(speechConfig, wavPath);
+
+            var mp3ByteArray = File.ReadAllBytes(mp3Path);
+            var outputStream = new MemoryStream();
+            using (var mp3Stream = new MemoryStream(mp3ByteArray))
+            using (var reader = new Mp3FileReader(mp3Stream))
+            using (var waveFileWriter = new WaveFileWriter(new IgnoreDisposeStream(outputStream), reader.WaveFormat))
+            {
+                byte[] buffer = new byte[reader.WaveFormat.AverageBytesPerSecond];
+                int read;
+                while ((read = reader.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    waveFileWriter.Write(buffer, 0, read);
+                    Console.WriteLine(buffer);
+                }
+            }
+            var wavBytes = outputStream.GetBuffer();
+            outputStream.Position = 0;
+
+            var translation = await FromStream(speechConfig, outputStream, wavPath);
 
             return translation;
         }
 
-        public static async Task<string> FromStream(SpeechConfig speechConfig, string wavPath)
+        public static async Task<string> FromStream(SpeechConfig speechConfig, MemoryStream outputStream, string waveFile)
         {
             StringBuilder resultStringBuilder = new StringBuilder();
 
-            var audioConfig = AudioConfig.FromWavFileInput(wavPath);
+            var audioConfig = AudioConfig.FromWavFileInput(waveFile);
+
             var recognizer = new SpeechRecognizer(speechConfig, audioConfig);
 
             var stopRecognition = new TaskCompletionSource<int>();
